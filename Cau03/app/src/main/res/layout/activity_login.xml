@@ -11,7 +11,7 @@
     <ImageView
         android:id="@+id/imgTopLogin"
         android:layout_width="match_parent"
-        android:layout_height="270dp"
+        android:layout_height="300dp"
         android:scaleType="fitXY"
         android:src="@drawable/top_background1"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,12 +21,12 @@
         android:id="@+id/tvWelcomeBack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="268dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="330dp"
         android:gravity="start"
         android:text="Welcome\nBack"
         android:textAlignment="textStart"
-        android:textColor="#FFA500"
+        android:textColor="#EA6D35"
         android:textSize="35sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -40,21 +40,14 @@
         android:layout_marginEnd="32dp"
         android:layout_marginTop="8dp"
         app:boxBackgroundMode="filled"
-        app:boxCornerRadii="12dp,12dp,12dp,12dp"
-        app:startIconPadding="40dp"
+        app:boxCornerRadiusTopStart="12dp"
+        app:boxCornerRadiusTopEnd="12dp"
+        app:boxCornerRadiusBottomStart="12dp"
+        app:boxCornerRadiusBottomEnd="12dp"
+        app:startIconDrawable="@drawable/email"
         app:layout_constraintTop_toBottomOf="@id/tvWelcomeBack"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
-
-        <!-- Thêm ImageView để thay thế icon start -->
-        <ImageView
-            android:id="@+id/imgEmailIcon"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:src="@drawable/email"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:contentDescription="Email Icon" />
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etEmailLogin"
@@ -64,36 +57,37 @@
             android:inputType="textEmailAddress" />
     </com.google.android.material.textfield.TextInputLayout>
 
-
     <com.google.android.material.textfield.TextInputLayout
-android:id="@+id/textInputLayoutPassword"
-android:layout_width="0dp"
-android:layout_height="wrap_content"
-android:layout_marginStart="32dp"
-android:layout_marginTop="16dp"
-android:layout_marginEnd="32dp"
-app:boxBackgroundMode="filled"
-app:boxCornerRadii="12dp,12dp,12dp,12dp"
-app:startIconDrawable="@drawable/password"
-app:startIconSize="24dp"
-    app:layout_constraintTop_toBottomOf="@id/textInputLayoutEmail"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintEnd_toEndOf="parent">
+        android:id="@+id/textInputLayoutPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        app:boxBackgroundMode="filled"
+        app:boxCornerRadiusTopStart="12dp"
+        app:boxCornerRadiusTopEnd="12dp"
+        app:boxCornerRadiusBottomStart="12dp"
+        app:boxCornerRadiusBottomEnd="12dp"
 
-<com.google.android.material.textfield.TextInputEditText
-android:id="@+id/etPasswordLogin"
-android:layout_width="match_parent"
-android:layout_height="wrap_content"
-android:hint="        Password"
-android:inputType="textPassword"/>
+        app:startIconDrawable="@drawable/password"
+        app:layout_constraintTop_toBottomOf="@id/textInputLayoutEmail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etPasswordLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="        Password"
+            android:inputType="textPassword"/>
     </com.google.android.material.textfield.TextInputLayout>
 
-
-<ImageView
+    <ImageView
         android:id="@+id/btnLogin"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="28dp"
         android:layout_marginEnd="24dp"
         android:contentDescription="Login"
         android:src="@drawable/btn_arraw1"
@@ -125,10 +119,10 @@ android:inputType="textPassword"/>
                 android:id="@+id/tvFacebook"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
                 android:text="Facebook     "
-                android:textColor="#0B84ED"
-                android:textSize="16sp"
-                android:layout_marginEnd="8dp"/>
+                android:textColor="#1F4C75"
+                android:textSize="16sp" />
 
             <ImageButton
                 android:id="@+id/btnFacebook"
@@ -155,15 +149,15 @@ android:inputType="textPassword"/>
                 android:id="@+id/tvGoogle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
                 android:text="Google      "
-                android:textColor="#0B84ED"
-                android:textSize="16sp"
-                android:layout_marginEnd="8dp"/>
+                android:textColor="#1F4C75"
+                android:textSize="16sp" />
 
             <ImageButton
                 android:id="@+id/btnGoogle"
                 android:layout_width="32dp"
-                android:layout_height="48dp"
+                android:layout_height="32dp"
                 android:src="@drawable/google"
                 android:scaleType="centerInside"
                 android:background="@drawable/bg_circle"
@@ -178,11 +172,11 @@ android:inputType="textPassword"/>
         android:id="@+id/tvRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Are you new user? Register"
-        android:textSize="16sp"
-        android:textColor="#0B84ED"
         android:layout_marginTop="16dp"
-        app:layout_constraintTop_toBottomOf="@id/llSocialLogin"
+        android:text="Are you new user? Register"
+        android:textColor="#1F4C75"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/llSocialLogin" />
 </androidx.constraintlayout.widget.ConstraintLayout>

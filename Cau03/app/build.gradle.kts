@@ -4,7 +4,7 @@ plugins {
 
 android {
     namespace = "vn.iotstar.baitap_03"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "vn.iotstar.baitap_03"
